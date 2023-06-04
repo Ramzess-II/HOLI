@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.holi">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- <uses-permission
+         android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+         tools:ignore="ScopedStorage" />  -->
+
+
+     <application
+         android:allowBackup="true"
+         android:dataExtractionRules="@xml/data_extraction_rules"
+         android:fullBackupContent="@xml/backup_rules"
+         android:icon="@mipmap/ic_launcher_new_logo"
+         android:label="@string/app_name"
+         android:roundIcon="@mipmap/ic_launcher_new_logo_round"
+         android:screenOrientation="portrait"
+         android:supportsRtl="true"
+         android:theme="@style/Theme.HOLI"
+         tools:targetApi="31">
+
+         <provider
+             android:authorities="com.example.homefolder.example.provider"
+             android:name="androidx.core.content.FileProvider"
+             android:exported="false"
+             android:grantUriPermissions="true">
+             <meta-data
+                 android:name="android.support.FILE_PROVIDER_PATHS"
+                 android:resource="@xml/file_path"/>
+         </provider>
+
+         <activity
+             android:name=".User_pass_activity"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL"
+             android:exported="false" />
+         <activity
+             android:name=".password_activity"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" />
+         <activity
+             android:name=".Many_weight_activity"
+             android:exported="false"
+             android:screenOrientation="portrait" />
+         <activity
+             android:name=".Protocol_activity"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" />
+         <activity
+             android:name=".Activity_person"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" />
+         <activity
+             android:name=".Weight_set_activity"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" />
+         <activity
+             android:name=".Info_activity"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" />
+         <activity
+             android:name=".Operator_set_activity"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" />
+         <activity
+             android:name=".Person_seting_activity"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" />
+         <activity
+             android:name=".One_sawe_activity"
+             android:exported="false"
+             android:screenOrientation="portrait" />
+         <activity
+             android:name=".View_Activity"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" />
+         <activity
+             android:name=".DataBaseActivity"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" />
+         <activity
+             android:name=".Save_Activity"
+             android:exported="false"
+             android:screenOrientation="portrait"
+             android:theme="@style/Theme.HOLI_NO_FULL" /> <!-- android:noHistory="true" это чтоб при выходе из активити она закрылась -->
+        <activity
+            android:name=".Net_Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HOLI_NO_FULL" />
+        <activity
+            android:name=".Seting_Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HOLI_NO_FULL" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ВВС складський облiк</string>
+    <string name="zero">&gt;0&lt;</string>
+    <string name="tara">&gt;T&lt;</string>
+    <string name="version">AWS_1.2</string>
+</resources>
